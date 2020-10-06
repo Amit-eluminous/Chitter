@@ -58,7 +58,7 @@ class HomeController extends Controller
                         ->whereIn('user_id',$followed_ids)
                         ->orderBy('id','DESC')
                         ->get();
-        // dump($posts);
+
         $this->ViewData['posts'] = $posts;
         return view('posted-chits',$this->ViewData);
     }
